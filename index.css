@@ -1,0 +1,23 @@
+
+* {margin: 0; padding: 0;}
+ul, li { list-style: none;}
+
+.main{ width: 900px; margin: 0 auto; }
+
+.title { margin: 10px 0;}
+
+.btn { padding: 4px 6px;}
+
+.inputText { font-size: 16px; padding: 10px; }
+
+.content { float: left;}
+.sidebar { float: left; margin-left: 20px; }
+
+.content .item { margin-bottom: 4px;}
+
+.word-list { 
+    list-style-position: inside; 
+    /* list-style-type: decimal-leading-zero; */
+    max-height: 500px; overflow: auto;
+}
+.word-item { list-style: inherit; }

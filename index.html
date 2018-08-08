@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>有道单词本</title>
+
+
+    <script src="vendor/vue/2.5.16/vue.min.js"></script>
+    <script src="wordbook.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main" id="app">
+        <h1 class="title">有道单词本</h1>
+        <div class="content">
+            <div class="item">
+                Name: <input type="text" v-model="wordBookName"/>
+            </div>
+            <div class="item">
+                <textarea class="inputText"  rows="24" cols="50"
+                v-model="inputText"></textarea>
+            </div>
+            <div class="item">
+                <button type="button" class="btn" v-on:click="add" >添加</button>
+                <button type="button" class="btn" v-on:click="clearInput" >清空</button>
+                <button type="button" class="btn" v-on:click="clear" >删除所有</button>
+                <button type="button" class="btn" v-on:click="save" >生成</button>
+            </div>
+        </div>
+        <div class="sidebar">
+            <p>Count: {{ words.length }}</p>
+            <ol class="word-list">
+                <li class="word-item" v-for="(word, index) in words">
+                    {{ word }}
+                </li>
+            </ol>
+        </div>
+    </div>
+
+<script src="index.js"></script>
+</body>
+</html>
